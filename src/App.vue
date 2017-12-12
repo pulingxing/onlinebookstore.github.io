@@ -1,7 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <main class="main">
+      <router-view/>
+    </main>
+    <footer class="footer">
+      <ul>
+        <router-link :to="{name: 'home'}" tag="li" exact>首页</router-link>
+        <router-link :to="{name: 'classify'}" tag="li" @click="look">分类</router-link>
+        <router-link :to="{name: 'cart'}" tag="li" >购物车</router-link>
+        <router-link :to="{name: 'me'}" tag="li" >我</router-link>
+      </ul>
+    </footer>
   </div>
 </template>
 
@@ -11,13 +20,6 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+@import "./styles/common";
 </style>

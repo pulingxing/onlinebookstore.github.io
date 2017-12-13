@@ -1,0 +1,73 @@
+@themeColor:#29C08D;
+@fontSize:16px;
+.me{
+    .header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        color: #ffffff;
+        }
+    header{
+        width:100%;
+        height: 50px;
+        font:20px/50px "微软雅黑";
+        margin-bottom:20px;
+        .rollback{
+            font-size: 25px;
+            margin-right: 15%;
+        }
+        .choice{
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            border-bottom: 1px solid transparent;
+        }
+    }
+    form{
+        font-size:@fontSize;
+        padding:20px;
+        label{
+            position: relative;
+            span{
+                display: inline-block;
+                width: 22%;
+            }
+            p{
+                position: absolute;
+                top:25px;
+                left: 85px;
+                margin:0;
+                color: #d31113;
+            }
+            input{
+                width:70%;
+                border:none;
+                outline:none;
+                border-bottom:0.2px solid silver;
+                padding:5px;
+                margin-bottom: 35px;
+            }
+        }
+        button{
+            height: 40px;
+            outline: none;
+            border:1px solid #1dbf73;
+            width:100%;
+            background:@themeColor;
+            color: #fff;
+            font-size:@fontSize;
+            margin-bottom: 20px;
+        }
+        .others{
+            a{
+                text-decoration: none;
+                color: #4a649c;
+            }
+        }
+    }
+}
+

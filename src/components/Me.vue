@@ -24,7 +24,7 @@ export default {
     font-size: 16px;
     line-height: 50px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     color: #ffffff;
   }
 </style>

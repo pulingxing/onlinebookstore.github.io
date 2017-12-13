@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import bootstrap from 'bootstrap-css'
+import bootstrap from 'bootstrap/dist/css/bootstrap.css'
+import swiper from 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 

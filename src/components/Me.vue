@@ -1,6 +1,5 @@
 <template>
   <div class="me">
-    <h1 class="header">{{msg}}</h1>
     <header>
       <span class="rollback"><</span>
       <span class="choice login" @click="showForm" :formStyle="formStyle">登录</span>

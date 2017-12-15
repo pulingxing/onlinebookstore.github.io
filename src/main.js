@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import login from './js/login'
 import bootstrap from 'bootstrap/dist/css/bootstrap.css'
 import swiper from 'swiper/dist/css/swiper.css'
 

@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <!-- 头部标题 -->
-    <h1 class="header">{{msg}}</h1>
+    
     <!-- banner轮播图 -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -13,7 +12,7 @@
     </div>
     <!-- 活动通知 -->
     <div class="notice">
-      <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>{{notice}}
+      <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>{{notice}}
     </div>
     <!-- 书籍列表 -->
     <div class="bookList">
@@ -60,11 +59,11 @@
       return {
         msg: '掌上书城',
         listImg:[
-        {url:"https://images-cn.ssl-images-amazon.com/images/I/51CaeL3lLtL._SX260_.jpg"},
-        {url:"https://images-cn.ssl-images-amazon.com/images/I/516BsgBkUpL.jpg"},
-        {url:"https://images-cn.ssl-images-amazon.com/images/I/41OO8kdSuUL._SX260_.jpg"}
+        {url:"../../static/image/0F8F5755BA25AAADBEEC2438BC089062.png"},
+        {url:"../../static/image/EE1C1D34F38A8620055F58557510CC62.png"},
+        {url:"../../static/image/FB071C143AB303EDB502A408A3E4C269.png"}
         ],
-        notice:'双12全场低至1折，更有隐藏神秘惊喜等着你哦！',
+        notice:'双12全场低至1折，更有隐藏神秘惊喜等着你哦!',
         newBook: [
             {
                 name: 'JavaScript高级程序设计',
@@ -164,7 +163,7 @@
     font-size: 16px;
     line-height: 50px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.9);
+    background: #29C08D;
     color: #ffffff;
     }
   .swiper-container {
@@ -179,7 +178,6 @@
             background-size: cover;
             width: 100%;
             height: 100%;
-            background: red;
             img {
                 width: 100%;
                 height: 100%;
@@ -201,15 +199,27 @@
   .notice {
     width: 100%;
     height: 30px;
+    line-height:30px;
     margin-bottom: 10px;
     overflow: hidden;
-    border-top: 1px solid #1d1d1d;
-    border-bottom:1px solid #1d1d1d;
+    border-top: 1px solid #9a8d8d;
+    border-bottom:1px solid #9a8d8d;
+    animation: textmove 3s infinite;
     span {
       line-height: 30px;
-      color: yellow;
-      margin-left: 15px;
-        } 
+      font-size: 18px;
+      color: #edff00;
+      margin: 0 10px;
+      animation: notice 3s infinite;
+        }
+    @keyframes notice {
+        0%{color: #edff00; } 
+        100%{color: red; } 
+    } 
+    }
+    @keyframes textmove {
+        0%{color: #aaa; } 
+        100%{color: red; } 
     }
   .title {
     font-size: 18px;

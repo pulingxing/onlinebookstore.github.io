@@ -1,11 +1,18 @@
 <template>
   <div class="classify">
-    <h1 class="header">{{msg}}</h1>
-    <div class="input-group search-tools">
-      <input type="text" class="form-control" :placeholder="placeholder" @keyup="$emit('search',$event.target.value)">
+    <div class="input-group search-tools"
+      placeholder="请输入图书名称或者书籍的作者进行搜索" 
+      @search="searchBook" 
+    >
+      <input type="search" class="form-control" :placeholder="placeholder" @keyup="$emit('search',$event.target.value)">
       <span class="glyphicon glyphicon-search"></span>
     </div>
-    <div class="book-lists">
+    
+    <div class="book-lists"
+      :th-info="thItem" 
+      :book-info="bookFilter" 
+      :noMatching="notFindMatch"
+    >
       <ul>
         <li v-for="list in bookList" :key="list.id">
           <div class="imgbox"><img :src="list.photo" alt=""></div>
@@ -21,105 +28,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Classify',
-  data () {
-    return {
-      msg: '分类',
-      bookList: [
-            {
-                name: 'JavaScript高级程序设计',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51CaeL3lLtL._SX260_.jpg',
-                price: '￥65.30',
-                author: "Nicholas C. Zakas",
-            },
-            {
-                name: 'Web前端开发修炼之道',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/41OO8kdSuUL._SX260_.jpg',
-                price: '￥41.00',
-                author: "周志明"
-            },
-            {
-                name: '深入理解ES6',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51kEnK%2BWQ-L._SX365_BO1,204,203,200_.jpg',
-                price: '￥68.30',
-                author: "David Flanagan",
-            },
-            {
-                name: 'JavaScript权威指南',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/516BsgBkUpL.jpg',
-                price: '￥96.50',
-                author: "David Flanagan",
-            },
-            {
-                name: '高性能JavaScript',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51T4tGqPRaL._SX396_BO1,204,203,200_.jpg',
-                price: '￥51.30',
-                author: "秦小波",
-            },
-            {
-                name: '码农·JavaScript',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/41ciPk2DBTL.jpg',
-                price: '￥78.90',
-                author: "秦小波",
-            },
-            {
-                name: '局外人',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51kKGTD9xCL._AC_SR300,300_.jpg',
-                price: '￥32.28',
-                author: "秦小波",
-            },
-            {
-                name: '解忧杂货铺',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51VNBGrPxVL._AC_SR300,300_.jpg',
-                price: '￥35.10',
-                author: "秦小波",
-            },
-            {
-                name: '瓦尔登湖',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51fSVKt36KL._AC_SR300,300_.jpg',
-                price: '￥68.30',
-                author: "秦小波",
-            },
-            {
-                name: '这么慢那么美',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/510im9j53mL._AC_SR300,300_.jpg',
-                price: '￥96.50',
-                author: "秦小波",
-            },
-            {
-                name: '时间停止的那天',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/51CVi5j14rL._AC_SR300,300_.jpg',
-                price: '￥51.30',
-                author: "秦小波",
-            },
-            {
-                name: '芳华',
-                photo: 'https://images-cn.ssl-images-amazon.com/images/I/515Gb0FbIZL._AC_SR300,300_.jpg',
-                price: '￥25.50',
-                author: "秦小波",
-            }
-        ]
-   
-  }
-  // computed: {
-  //   bookLength() {
-  //     return this.bookFilter.length;
-  //   }
-  //   bookFilter() {
-  //     if(!this.matching) {
-
-  //     }
-  //   }
-
-  // }
-  // methods:{
-
-  //   }
-  }
-}
-</script>
+<script src="../js/classify.js"></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
@@ -129,16 +38,6 @@ export default {
     margin: 0;
     position:relative;
     height: 100%;
-  .header {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 16px;
-    line-height: 50px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.9);
-    color: #ffffff;
-    }
   .search-tools {
     width: 100%;
     padding: 10px 5px; 
@@ -171,6 +70,9 @@ export default {
           width: 20%;
           height: 90%;
           display: inline-block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
           img{
             width: 100%; 
             height: 100%;

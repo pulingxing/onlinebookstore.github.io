@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Classify from '@/components/Classify'
 import Cart from '@/components/Cart'
 import Me from '@/components/Me'
+import Pay from '@/components/Pay'
 
 Vue.use(Router)
 
@@ -30,6 +31,7 @@ export default new Router({
       path: '/Me',
       name: 'me',
       component: Me
-    },
+    }
+    
   ]
 })

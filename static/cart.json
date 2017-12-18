@@ -1,0 +1,24 @@
+[
+    {
+        "name": "JavaScript高级程序设计",
+        "photo": "https://images-cn.ssl-images-amazon.com/images/I/51CaeL3lLtL._SX260_.jpg",
+        "price": 65,
+        "productQuantity":1,
+        "author": "Nicholas C. Zakas"
+    },
+    {
+        "name": "解忧杂货铺",
+        "photo": "https://images-cn.ssl-images-amazon.com/images/I/51VNBGrPxVL._AC_SR300,300_.jpg",
+        "price": 35,
+        "productQuantity":1,
+        "author": "秦小波"
+    },
+    {
+        "name": "这么慢那么美",
+        "photo": "https://images-cn.ssl-images-amazon.com/images/I/510im9j53mL._AC_SR300,300_.jpg",
+        "price": 96,
+        "productQuantity":1,
+        "author": "秦小波"  
+    }
+]
+

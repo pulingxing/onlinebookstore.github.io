@@ -1,0 +1,213 @@
+@charset"utf-8";
+.checked {
+    background: red;
+}
+.show{
+    display: block;
+}
+main{
+    position: relative;
+    .cart {
+      margin: 0;
+      padding: 0;
+      .header {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          font-size: 16px;
+          line-height: 50px;
+          text-align: center;
+          background: #29C08D;
+          color: #ffffff;
+        }
+      .cartList {
+        width: 100%;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border-bottom: 1px solid #dcd7d7;
+            position: relative;
+            .checkbox{
+              margin: 0;
+              padding: 0;
+              display: inline-block;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: 1px solid #aaa;
+              left: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            .imgbox {
+              width: 20%;
+              height: 90%;
+              display: inline-block;
+              position: absolute;
+              left:10%;
+              // border: 1px solid red;
+              top: 50%;
+              transform: translateY(-50%);
+              img{
+                width: 100%; 
+                height: 100%;
+              }
+            }
+            span {
+              position: absolute;
+              // border: 1px solid yellow;
+              &.book-name {
+                top: 20px;
+                left:32%;
+              }
+              &.book-author {
+                top:50px;
+                left:32%;
+              }
+              &.totalPrice {
+                left: 32%;
+                top: 80px;
+                color:red;
+              }
+              &.font {
+                top: 50%;
+                transform: translateY(-50%);
+                right:10px;
+                color:#aaa;
+              }
+            }
+            .add-reduce {
+              position: absolute;
+              right: 5px;
+              bottom: 10px;
+              font-size: 16px;
+              .add {
+                width: 30px;
+                height: 30px;
+                border:1px solid #aaa;
+                background: #fff;       
+              }
+              .amount{
+                width: 52px;
+                height: 30px;
+                display:inline-block;
+                border: 1px solid #aaa;
+                .number {
+                  width: 50px;
+                  height: 26px;
+                  border:none;
+                  text-align: center;
+                }
+              }
+              .reduce {
+                width: 30px;
+                height: 30px;
+                border:1px solid #aaa;
+                background: #fff; 
+              }
+            }
+            .delete {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              text-align:center;
+              
+              
+            }
+          }
+        }
+      }
+      .cart-foot {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        border-top: 1px solid #aaa;
+        .checkAll {
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 1px solid #aaa;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .selectAll {
+            display: inline-block;
+            position: absolute;
+            margin-left:10%;
+            top: 50%;
+            transform: translateY(-50%); 
+        }
+        .item-total {
+          display: inline-block;
+          position: absolute;
+          margin-left:50%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .settlement {
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          display: inline-block;
+          position: absolute;
+          margin-left:72%;
+          background: red;
+          color:#fff;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+  
+      } 
+      .mask {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: none;
+          background: rgba(0, 0, 0, 0.8);
+          .confirmbox {
+              width: 80%;
+              height: 200px;
+              margin: 0 auto;
+              margin-top:200px;
+              background: rgba(255, 255, 255, 0.863);
+              box-shadow: 0 0 8px 4px #aaa;
+              .title {
+                  display:block;
+                  text-align: center;
+                  padding-top: 50px;
+              }
+              .confirm {
+                    width: 100%;
+                    text-align: center;
+                    button{
+                        width: 20%;
+                        height: 35px;
+                        margin: 50px 20px;
+                        border: none;
+                        background: #1dbf73;
+                        border-radius: 4px;
+                        color: #fff;
+                        &:hover{
+                            background:red;
+                        }
+                    }
+              }
+          }
+      }    
+    }
+  }

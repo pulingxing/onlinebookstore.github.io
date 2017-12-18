@@ -86,20 +86,24 @@
             <label>邮政编码：</label>
             <input type="text" placeholder="请填写您的姓名!">
           </div>
-          <div class="place">
+          <div class="place" v-for="list in place" :key="list.id">
             <select>
               <option>四川省</option>
-              <option>浙江省</option>
-              <option>陕西省</option>
               <option>云南省</option>
+              <option>安徽省</option>
+              <option>湖南省</option>
             </select>
             <select>
-              <option>四川省</option>
+              <option v-for="city in list.city" :key="city.id">{{city.name}}</option>
             </select>
             <select>
-              <option>四川省</option>
+              <option>高新区</option>
+              <option>青羊区</option>
+              <option>天府新区</option>
+              <option>武侯区</option>
             </select>
           </div>
+          
         </form>
       </div>
       <!-- <div class="increaseAddress" :class="{'show':addressShow}"></div> -->

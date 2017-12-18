@@ -1,50 +1,69 @@
 @themeColor:#29C08D;
 @fontSize:16px;
-.me{
-    .header {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        font-size: 16px;
-        line-height: 50px;
-        text-align: center;
-        background: #29C08D;
-        color: #ffffff;
-        }
-    header{
-        width:100%;
+.loginCont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: #fff;
+    height: 660px;
+    width: 100%;
+    overflow: hidden;
+     
+}
+.login{
+    margin-top: 20px;
+  .title {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+  }
+  header{
+      width:100%;
         height: 50px;
         font:20px/50px "微软雅黑";
-        margin-bottom:20px;
-        .rollback{
-            font-size: 25px;
-            margin-right: 15%;
-        }
+        margin: 0 auto;
+        margin-bottom:30px;
+        text-align: center;
         .choice{
             display: inline-block;
             width: 30%;
             text-align: center;
             border-bottom: 1px solid transparent;
+            font-weight: bolder;
         }
+      .formStyle{
+      border-bottom: 1px solid #29C08D;
+
     }
+
+  }
     form{
+        text-align: center;
         font-size:@fontSize;
-        padding:20px;
+        padding:5px 10px;
+        margin-top: 50px;
         label{
             position: relative;
+            width: 100%;
             span{
                 display: inline-block;
-                width: 22%;
+                width: 25%;
             }
             p{
                 position: absolute;
-                top:25px;
-                left: 85px;
+                top:36px;
+                left: 72px;
                 margin:0;
                 color: #d31113;
             }
             input{
-                width:70%;
+                width:72%;
                 border:none;
                 outline:none;
                 border-bottom:0.2px solid silver;
